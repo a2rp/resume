@@ -204,13 +204,19 @@ export const Education = styled.div`
 
 export const Heading = styled.h3`
     border-bottom: 1px solid #666;
-    padding-left: 15px;
+    padding: 0 15px;
     margin: 0;
 
     a {
         display: flex;
         align-items: center;
         gap: 15px;
+    }
+
+    &.allProjects {
+        display: flex;
+        justify-content: space-between;
+        margin-top: 30px;
     }
 `;
 
@@ -228,6 +234,7 @@ export const IndustryExperience = styled.div`
         display: flex;
         justify-content: space-between;
         align-items: center;
+        padding: 0 15px 0 0;
 
         .subheading {
             margin-bottom: -5px;
@@ -242,7 +249,7 @@ export const IndustryExperience = styled.div`
 
         li {
             display: grid;
-            grid-template-columns: 100px 1fr;
+            grid-template-columns: 80px 1fr;
 
             div.tasksDetail {
                 ul {
@@ -250,15 +257,18 @@ export const IndustryExperience = styled.div`
                     /* display: flex; */
 
                     li {
-                        /* display: flex;
-                        justify-content: space-between; */
+                        display: flex;
+                        gap: 5px;
+                        /* justify-content: space-between; */
+
+                        a {
+                            display: inline-block;
+                            color: #000;
+                            text-decoration: none;
+                            padding: 1px 0;
+                            border-bottom: 1px solid #666;
+                        }
                     }
-                }
-                a {
-                    color: #000;
-                    text-decoration: none;
-                    padding: 1px 0;
-                    border-bottom: 1px solid #666;
                 }
             }
         }
@@ -271,12 +281,24 @@ export const FreelancingExperience = styled.div`
     padding: 15px;
 
     .tenure,
-    .techStack {
+    .techStack,
+    .projects {
         display: grid;
-        grid-template-columns: 100px 1fr;
+        grid-template-columns: 80px 1fr;
     }
-    ul {
-        margin-left: 3px;
+    div {
+        ul {
+            padding-left: 15px;
+
+            li {
+                a {
+                    text-decoration: none;
+                    color: #000;
+                    padding: 1px 0;
+                    border-bottom: 1px solid #666;
+                }
+            }
+        }
     }
 `;
 
@@ -323,25 +345,17 @@ export const Project = styled.div`
 export const AllProjectsWrapper = styled.div`
     padding: 15px;
 
-    .allProjects {
-        display: flex;
-        justify-content: space-between;
-        align-items: center;
+    ul {
+        padding-left: 15px;
 
-        a {
-            text-decoration: none;
-            color: #000;
-            padding: 1px 0;
-            /* border-bottom: 1px solid #666; */
-            margin-right: 15px;
-        }
-    }
-    p {
-        a {
-            text-decoration: none;
-            color: #000;
-            padding: 1px 0;
-            border-bottom: 1px solid #666;
+        li {
+            a {
+                text-decoration: none;
+                color: #000;
+                padding: 1px 0;
+                /* border-bottom: 1px solid #666; */
+                margin-right: 15px;
+            }
         }
     }
 `;
