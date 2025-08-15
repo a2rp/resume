@@ -1,5 +1,7 @@
 # Ashish Ranjan – Resume
 
+**View Online:** https://a2rp.github.io/resume/
+
 **Download (latest PDF):**
 [`Ashish_Ranjan_Resume.pdf`](https://github.com/a2rp/resume/releases/latest/download/Ashish_Ranjan_Resume.pdf)
 
