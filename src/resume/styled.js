@@ -6,6 +6,12 @@ export const Styled = {
         max-width: 1123px;
         margin: auto;
         height: 100vh;
+        display: flex;
+        flex-direction: column;
+    `,
+    DownloadResume: styled.button`
+        margin: 14vh auto;
+        padding: 5px 15px;
     `,
     TopSection: styled.div`
         /* border-bottom: 1px solid r666(0, 0, 0, 1); */

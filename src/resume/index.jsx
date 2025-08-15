@@ -6,9 +6,16 @@ import { FaGithub, FaGlobe, FaLink, FaLinkedin } from 'react-icons/fa'
 import { FaLocationDot } from 'react-icons/fa6'
 
 const Resume = () => {
+    const RESUME_URL = "https://github.com/a2rp/resume/releases/latest/download/Ashish_Ranjan_Resume.pdf";
+    const handleDownload = () => window.open(RESUME_URL, "_blank", "noopener");
+
     return (
         <>
             <Styled.Wrapper>
+                {/* <Styled.DownloadResume
+                    onClick={handleDownload}
+                    className='downloadResumeButton'
+                >Download Resume</Styled.DownloadResume> */}
                 <Styled.TopSection>
                     <Styled.LeftCol>
                         <h1 className='name'>Ashish Ranjan</h1>
