@@ -233,7 +233,7 @@ const Resume = () => {
                                                 <li>Admin Panel</li>
                                                 <li>User Management System</li>
                                                 <li>Online Payment System with Stripe and Razorpay</li>
-                                                <li>and more.</li>
+                                                {/* <li>and more.</li> */}
                                             </ul>
                                         </div>
                                     </li>
@@ -260,6 +260,7 @@ const Resume = () => {
                                                 <li>User Profile Management System</li>
                                                 <li>Display MySQL Data With DataTables</li>
                                                 <li>Payment System with Stripe.</li>
+                                                {/* <li>and more.</li> */}
                                             </ul>
                                         </div>
                                     </li>
@@ -326,7 +327,7 @@ const Resume = () => {
                                     <li>
                                         All my personal, client, and experimental work lives on <a href="https://github.com/a2rp" target='_blank'>GitHub/a2rp.</a>
                                     </li>
-                                    <li>Older work archive: <a href="http://www.ashishranjan.in" target='_blank'>ashishranjan.in</a>.</li>
+                                    <li>Older work archive: <a href="http://www.ashishranjan.in" target='_blank'>http://www.ashishranjan.in</a>.</li>
                                 </ul>
                             </AllProjectsWrapper>
                         </section>
@@ -338,3 +339,4 @@ const Resume = () => {
 }
 
 export default Resume
+

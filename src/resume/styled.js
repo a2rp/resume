@@ -217,6 +217,8 @@ export const Heading = styled.h3`
         display: flex;
         align-items: center;
         gap: 15px;
+        color: #000;
+        text-decoration: none;
     }
 
     &.allProjects {
@@ -359,7 +361,7 @@ export const AllProjectsWrapper = styled.div`
                 text-decoration: none;
                 color: #000;
                 padding: 1px 0;
-                /* border-bottom: 1px solid #666; */
+                border-bottom: 1px solid #666;
                 margin-right: 15px;
             }
         }
