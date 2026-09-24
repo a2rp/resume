@@ -6,8 +6,6 @@ import { FaGithub, FaGlobe, FaLink, FaLinkedin } from 'react-icons/fa'
 import { FaLocationDot } from 'react-icons/fa6'
 
 const Resume = () => {
-    const RESUME_URL = "https://github.com/a2rp/resume/releases/latest/download/Ashish_Ranjan_Resume.pdf";
-    const handleDownload = () => window.open(RESUME_URL, "_blank", "noopener");
 
     return (
         <>
@@ -103,7 +101,7 @@ const Resume = () => {
                             <Heading>AWARDS</Heading>
                             <Awards>
                                 <div className='name'>IBM India Code Rally Challenge</div>
-                                <div className='type'>Online AI Race Coding Competition</div>
+                                <div className='type'>Online Coding Competition</div>
                                 <div className='date'>Date: <b>August, 2015</b></div>
                                 <div className='position'>Position: <b>1st Rank</b></div>
                             </Awards>
@@ -176,7 +174,7 @@ const Resume = () => {
                         <section>
                             <Heading>PROFESSIONAL SUMMARY</Heading>
                             <ProfessionalSummary>
-                                Full-stack developer (React • Node.js) who ships fast, stable, SEO-friendly apps with payments & CI/CD—focused on measurable performance and clean, maintainable code.
+                                Full-stack developer (React • Node.js) who ships fast, stable, SEO-friendly apps with payments & CI/CD - focused on measurable performance and clean, maintainable code.
                                 <br /><br />
                             </ProfessionalSummary>
                         </section>
@@ -207,7 +205,7 @@ const Resume = () => {
                                                     <a href="https://pentestgenix.com/" target='_blank'>https://pentestgenix.com/</a> <span>All public pages (React, Node).</span>
                                                 </li>
                                                 <li><a href="https://karate-premier-league.netlify.app/" target="_blank">https://karate-premier-league.netlify.app/</a> <span>Full event MERN app. (React, Node).</span></li>
-                                                <li>meducate.ai <span>Group pages (React)</span></li>
+                                                <li>Meducate project <span>Group pages (React)</span></li>
                                             </ul>
                                         </div>
                                     </li>
