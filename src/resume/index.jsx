@@ -19,10 +19,10 @@ const Resume = () => {
                         <h1 className='name'>Ashish Ranjan</h1>
                         <h3 className='profession'>Full-Stack Developer (React • Node.js)</h3>
                         <div className='githubLinkedin'>
-                            <a className='github' href="https://github.com/a2rp" target='_blank'>
+                            <a className='github' href="https://github.com/a2rp" target='_blank' rel='noopener noreferrer'>
                                 <FaGithub /> https://github.com/a2rp
                             </a>
-                            <a className='linkedin' href="https://linkedin.com/in/aashishranjan" target='_blank'>
+                            <a className='linkedin' href="https://linkedin.com/in/aashishranjan" target='_blank' rel='noopener noreferrer'>
                                 <FaLinkedin /> https://linkedin.com/in/aashishranjan
                             </a>
                         </div>
@@ -41,9 +41,9 @@ const Resume = () => {
                                     <li>
                                         <FaGlobe className='icon' />
                                         <div className='websiteLinks'>
-                                            <a href="https://www.ashishranjan.net" target='_blank'>https://www.ashishranjan.net</a>
+                                            <a href="https://www.ashishranjan.net" target='_blank' rel='noopener noreferrer'>https://www.ashishranjan.net</a>
                                             {/* ,
-                                        <br /> <a href="http://www.ashishranjan.in" target='_blank'>ashishranjan.in</a> */}
+                                        <br /> <a href="http://www.ashishranjan.in" target='_blank' rel='noopener noreferrer'>ashishranjan.in</a> */}
                                         </div>
                                     </li>
                                     <li>
@@ -199,10 +199,10 @@ const Resume = () => {
                                         <div className='tasksDetail'>
                                             <ul>
                                                 <li>
-                                                    <a href="https://abirnetworks.com/" target='_blank'>https://abirnetworks.com/</a> <span>Entire site (React, Node).</span>
+                                                    <a href="https://abirnetworks.com/" target='_blank' rel='noopener noreferrer'>https://abirnetworks.com/</a> <span>Entire site (React, Node).</span>
                                                 </li>
                                                 <li>
-                                                    <a href="https://pentestgenix.com/" target='_blank'>https://pentestgenix.com/</a> <span>All public pages (React, Node).</span>
+                                                    <a href="https://pentestgenix.com/" target='_blank' rel='noopener noreferrer'>https://pentestgenix.com/</a> <span>All public pages (React, Node).</span>
                                                 </li>
                                                 <li><a href="https://karate-premier-league.netlify.app/" target="_blank">https://karate-premier-league.netlify.app/</a> <span>Full event MERN app. (React, Node).</span></li>
                                                 <li>Meducate project <span>Group pages (React)</span></li>
@@ -309,13 +309,13 @@ const Resume = () => {
                                 <span>
                                     ALL PROJECTS
                                 </span>
-                                <a href="https://github.com/a2rp" target='_blank'>
+                                <a href="https://github.com/a2rp" target='_blank' rel='noopener noreferrer'>
                                     <FaLink /> https://github.com/a2rp
                                 </a>
                             </Heading>
 
                             <AllProjectsWrapper>
-                                {/* <p>I have also worked on many personal, client, and experimental projects during my freelancing journey. Explore all of them on my <a href="https://github.com/a2rp" target='_blank'>
+                                {/* <p>I have also worked on many personal, client, and experimental projects during my freelancing journey. Explore all of them on my <a href="https://github.com/a2rp" target='_blank' rel='noopener noreferrer'>
                                     GitHub
                                 </a>.
                                     <br />
@@ -323,9 +323,9 @@ const Resume = () => {
                                 </p> */}
                                 <ul>
                                     <li>
-                                        All my personal, client, and experimental work lives on <a href="https://github.com/a2rp" target='_blank'>GitHub/a2rp.</a>
+                                        All my personal, client, and experimental work lives on <a href="https://github.com/a2rp" target='_blank' rel='noopener noreferrer'>GitHub/a2rp.</a>
                                     </li>
-                                    <li>Older work archive: <a href="http://www.ashishranjan.in" target='_blank'>http://www.ashishranjan.in</a>.</li>
+                                    <li>Older work archive: <a href="http://www.ashishranjan.in" target='_blank' rel='noopener noreferrer'>http://www.ashishranjan.in</a>.</li>
                                 </ul>
                             </AllProjectsWrapper>
                         </section>

@@ -5,7 +5,8 @@ export const Styled = {
         /* border: 10px solid #f00; */
         max-width: 1123px;
         margin: auto;
-        height: 100vh;
+        min-height: calc(100vh - 84px);
+        height: auto;
         display: flex;
         flex-direction: column;
     `,
@@ -114,7 +115,7 @@ export const PersonalInfo = styled.div`
 export const Main = styled.div`
     position: relative;
     border-top: 1px solid rgba(0, 0, 0, 1);
-    height: calc(100% - 150px);
+    height: auto;
     display: grid;
     grid-template-columns: 250px 1fr;
 
