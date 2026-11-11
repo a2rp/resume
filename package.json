@@ -1,7 +1,8 @@
 {
-    "name": "frontend2",
+    "name": "resume",
     "private": true,
     "version": "0.0.0",
+    "description": "Responsive React resume page with work history, project links, and a downloadable PDF.",
     "type": "module",
     "scripts": {
         "dev": "vite",

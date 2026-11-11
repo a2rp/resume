@@ -35,8 +35,22 @@ const App = () => {
     const [menuOpen, setMenuOpen] = useState(false);
 
     useEffect(() => {
-        document.body.style.overflow = menuOpen ? "hidden" : "";
+        const mobileViewport = window.matchMedia("(max-width: 620px)");
+        if (!menuOpen || !mobileViewport.matches) {
+            document.body.style.overflow = "";
+            return undefined;
+        }
+
+        document.body.style.overflow = "hidden";
+        const closeMenuOnDesktop = (event) => {
+            if (!event.matches) {
+                setMenuOpen(false);
+            }
+        };
+        mobileViewport.addEventListener("change", closeMenuOnDesktop);
+
         return () => {
+            mobileViewport.removeEventListener("change", closeMenuOnDesktop);
             document.body.style.overflow = "";
         };
     }, [menuOpen]);
