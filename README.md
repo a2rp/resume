@@ -29,7 +29,7 @@ Build with `npm run build` and deploy with `npm run deploy`.
 
 [Open the resume](https://a2rp.github.io/resume/)
 
-[Download the PDF](https://a2rp.github.io/resume/downloads/Ashish_Ranjan_Resume.pdf)
+[Download the PDF](https://github.com/a2rp/resume/releases/latest/download/Ashish_Ranjan_Resume.pdf)
 
 ## Links
 

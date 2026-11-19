@@ -15,6 +15,8 @@ import { FiArrowUp, FiDownload, FiMenu, FiX } from "react-icons/fi";
 import Resume from "./resume";
 import "./index.css";
 
+const resumePdfUrl = "https://github.com/a2rp/resume/releases/latest/download/Ashish_Ranjan_Resume.pdf";
+
 const connectLinks = [
     { label: "Portfolio", href: "https://www.ashishranjan.net/", icon: FaGlobe },
     { label: "GitHub", href: "https://github.com/a2rp", icon: FaGithub },
@@ -67,7 +69,7 @@ const App = () => {
                 </a>
 
                 <div className="resume-actions">
-                    <a className="resume-download" href={import.meta.env.BASE_URL + "downloads/Ashish_Ranjan_Resume.pdf"} download>
+                    <a className="resume-download" href={resumePdfUrl} download>
                         <FiDownload />
                         <span>Download PDF</span>
                     </a>
@@ -89,7 +91,7 @@ const App = () => {
                     className={"resume-mobile-menu" + (menuOpen ? " is-open" : "")}
                     aria-hidden={!menuOpen}
                 >
-                    <a href={import.meta.env.BASE_URL + "downloads/Ashish_Ranjan_Resume.pdf"} download onClick={() => setMenuOpen(false)}>
+                    <a href={resumePdfUrl} download onClick={() => setMenuOpen(false)}>
                         <FiDownload /> Download PDF
                     </a>
                     <a href="https://www.ashishranjan.net/" target="_blank" rel="noopener noreferrer" onClick={() => setMenuOpen(false)}>
