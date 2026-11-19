@@ -112,7 +112,7 @@ const Resume = () => {
                             <Internship>
                                 <div className='name'>Tata Hispano Motors Carrocera</div>
                                 <div className='type'>ASP.NET Web Portal</div>
-                                <div className='date'>Date: <b>Jan–Apr 2013</b></div>
+                                <div className='date'>Date: <b>Jan-Apr 2013</b></div>
                                 <div className='location'>Location: <b>Jamshedpur, India</b></div>
                             </Internship>
                         </section>
@@ -185,7 +185,7 @@ const Resume = () => {
                             <IndustryExperience>
                                 <div className='nameTenure'>
                                     <h4 className='subheading'>ABIR Networks Private Limited</h4>
-                                    <span>May 2024 – May 2025</span>
+                                    <span>May 2024 - May 2025</span>
                                 </div>
                                 <ul>
                                     <li>
@@ -215,7 +215,7 @@ const Resume = () => {
                             <IndustryExperience>
                                 <div className='nameTenure'>
                                     <h4 className='subheading'>Modern Identity Private Limited</h4>
-                                    <span>July 2022 – May 2023</span>
+                                    <span>July 2022 - May 2023</span>
                                 </div>
                                 <ul>
                                     <li>
@@ -241,7 +241,7 @@ const Resume = () => {
                             <IndustryExperience>
                                 <div className='nameTenure'>
                                     <h4 className='subheading'>Tech Active Solutions India Pvt. Ltd</h4>
-                                    <span>October 2021 – June 2022</span>
+                                    <span>October 2021 - June 2022</span>
                                 </div>
                                 <ul>
                                     <li>
@@ -275,7 +275,7 @@ const Resume = () => {
                             >FREELANCING EXPERIENCE</Heading>
                             <FreelancingExperience>
                                 <div className='tenure'>
-                                    <b>Tenure:</b> June 2023 – May 2024,  January 2014 – April 2020
+                                    <b>Tenure:</b> June 2023 - May 2024,  January 2014 - April 2020
                                 </div>
                                 <div className='techStack'>
                                     <b>Tech stack:</b> React, Node.js, MongoDB... (full list in Skills)

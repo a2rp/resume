@@ -1,50 +1,186 @@
+:root {
+    color: #172431;
+    background: #eef2f5;
+    font-family: Arial, Helvetica, sans-serif;
+    font-synthesis: none;
+    line-height: 1.5;
+    text-rendering: optimizeLegibility;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
 
-.resume-content {
-    padding: 92px 20px 0;
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+}
+
+html {
+    min-width: 320px;
+    scroll-behavior: smooth;
+}
+
+body {
+    margin: 0;
+    min-width: 320px;
+    background: #eef2f5;
+}
+
+button,
+a {
+    font: inherit;
+}
+
+a {
+    color: #075f8f;
+    text-decoration: underline;
+    text-decoration-thickness: 1px;
+    text-underline-offset: 0.15em;
+    overflow-wrap: anywhere;
+}
+
+a:hover {
+    color: #08466a;
+}
+
+:focus-visible {
+    outline: 3px solid #1681b5;
+    outline-offset: 3px;
+}
+
+.resume-app {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
 }
 
 .resume-header {
-    box-shadow: 0 8px 24px rgba(16, 34, 55, 0.06);
+    position: sticky;
+    top: 0;
+    z-index: 30;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 16px;
+    padding: 10px max(12px, calc((100vw - 1123px) / 2));
+    border-bottom: 1px solid #d8e0e6;
+    background: #fff;
+    box-shadow: 0 4px 16px rgba(16, 34, 55, 0.06);
+}
+
+.resume-brand {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    min-width: 0;
+    color: #102237;
+    text-decoration: none;
+}
+
+.resume-brand img {
+    flex: 0 0 44px;
+    width: 44px;
+    height: 44px;
+    border-radius: 7px;
+    object-fit: contain;
+}
+
+.resume-brand span {
+    display: grid;
+    gap: 2px;
+    min-width: 0;
+    line-height: 1.2;
+}
+
+.resume-brand small {
+    color: #637281;
+    font-size: 0.64rem;
+    font-weight: 700;
+    letter-spacing: 0.1em;
+}
+
+.resume-brand strong {
+    font-size: 0.98rem;
+    font-weight: 700;
+}
+
+.resume-actions {
+    display: flex;
+    align-items: center;
+    gap: 9px;
 }
 
 .resume-actions a,
 .resume-download,
 .resume-menu-button {
-    align-items: center;
     display: inline-flex;
-    gap: 7px;
+    align-items: center;
     justify-content: center;
+    gap: 7px;
+    min-height: 40px;
+    border-radius: 7px;
+    font-size: 0.9rem;
+    font-weight: 600;
+    text-decoration: none;
+}
+
+.resume-actions > a:not(.resume-download) {
+    padding: 8px 12px;
+    border: 1px solid transparent;
+    color: #23303d;
+}
+
+.resume-actions > a:not(.resume-download):hover,
+.resume-actions > a:not(.resume-download):focus-visible {
+    border-color: #c7d2dc;
+    background: #f4f7f9;
+    color: #0d6694;
+}
+
+.resume-download {
+    padding: 8px 13px;
+    border: 1px solid #102237;
+    background: #102237;
+    color: #fff;
+}
+
+.resume-download:hover,
+.resume-download:focus-visible {
+    border-color: #0d6694;
+    background: #0d6694;
+    color: #fff;
 }
 
 .resume-menu-button {
-    background: transparent;
+    display: none;
+    width: 40px;
+    padding: 0;
     border: 1px solid #c7ced6;
-    border-radius: 7px;
+    background: #fff;
     color: #23303d;
     cursor: pointer;
-    height: 35px;
-    width: 35px;
 }
 
 .resume-menu-button:hover,
 .resume-menu-button:focus-visible {
     border-color: #0d6694;
-    box-shadow: 0 0 0 3px rgba(13, 102, 148, 0.1);
+    background: #f4f8fa;
     color: #0d6694;
 }
 
 .resume-mobile-menu {
-    background: #fff;
+    position: absolute;
+    top: calc(100% + 6px);
+    right: max(12px, calc((100vw - 1200px) / 2));
+    z-index: 31;
+    display: none;
+    gap: 4px;
+    min-width: 200px;
+    padding: 7px;
     border: 1px solid #c7ced6;
     border-radius: 10px;
+    background: #fff;
     box-shadow: 0 12px 28px rgba(16, 34, 55, 0.14);
-    display: none;
-    gap: 5px;
-    min-width: 190px;
-    padding: 8px;
-    position: absolute;
-    right: 5vw;
-    top: 59px;
 }
 
 .resume-mobile-menu.is-open {
@@ -52,85 +188,226 @@
 }
 
 .resume-mobile-menu a {
+    display: flex;
     align-items: center;
+    gap: 9px;
+    min-height: 40px;
+    padding: 8px 10px;
     border-radius: 7px;
     color: #23303d;
-    display: flex;
-    gap: 8px;
-    padding: 9px 10px;
     text-decoration: none;
 }
 
 .resume-mobile-menu a:hover,
 .resume-mobile-menu a:focus-visible {
     background: #f1f6fa;
-    box-shadow: inset 0 0 0 1px #c7ced6;
+    color: #0d6694;
+}
+
+.resume-content {
+    flex: 1;
+    width: 100%;
+    padding: 26px clamp(12px, 3vw, 32px) 32px;
+}
+
+.resume-footer {
+    padding: 18px clamp(14px, 3vw, 32px);
+    border-top: 1px solid #d8e0e6;
+    background: #fff;
+    color: #526272;
+    font-size: 0.875rem;
+}
+
+.resume-footer-inner {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 16px;
+    max-width: 1187px;
+    margin: 0 auto;
+}
+
+.resume-footer-inner > span a {
+    color: #102237;
+    font-weight: 600;
+}
+
+.resume-footer-links {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: 5px;
+}
+
+.resume-footer-links a {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 34px;
+    height: 34px;
+    border: 1px solid transparent;
+    border-radius: 7px;
+    color: #33495b;
+    font-size: 1rem;
+    text-decoration: none;
+}
+
+.resume-footer-links a:hover,
+.resume-footer-links a:focus-visible {
+    border-color: #c7d2dc;
+    background: #f4f7f9;
     color: #0d6694;
 }
 
 .resume-top-button {
-    align-items: center;
-    background: #102237;
-    border: 1px solid #102237;
-    border-radius: 50%;
-    bottom: 22px;
-    color: #fff;
-    cursor: pointer;
-    display: inline-flex;
-    height: 40px;
-    justify-content: center;
     position: fixed;
     right: 22px;
-    transition: border-color 180ms ease, box-shadow 180ms ease, color 180ms ease;
-    width: 40px;
+    bottom: 22px;
     z-index: 25;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 42px;
+    height: 42px;
+    border: 1px solid #102237;
+    border-radius: 50%;
+    background: #102237;
+    color: #fff;
+    cursor: pointer;
 }
 
 .resume-top-button:hover,
 .resume-top-button:focus-visible {
-    background: #fff;
     border-color: #0d6694;
-    box-shadow: 0 0 0 4px rgba(13, 102, 148, 0.12);
+    background: #fff;
     color: #0d6694;
 }
 
-@media (min-width: 621px) {
-    .resume-menu-button,
-    .resume-mobile-menu {
-        display: none;
-    }
-}
-
 @media (max-width: 620px) {
-    .resume-actions > a {
+    .resume-header {
+        gap: 8px;
+        padding: 8px 12px;
+    }
+
+    .resume-actions {
+        gap: 6px;
+    }
+
+    .resume-actions > a:not(.resume-download) {
         display: none;
     }
 
     .resume-actions .resume-download {
-        display: inline-flex;
-        padding: 7px;
+        min-height: 38px;
+        padding: 7px 9px;
+        font-size: 0.82rem;
     }
 
-    .resume-actions .resume-download span {
-        display: none;
+    .resume-menu-button {
+        display: inline-flex;
+        flex: 0 0 38px;
+        width: 38px;
+        min-height: 38px;
     }
 
     .resume-mobile-menu {
         right: 12px;
     }
-}
 
-@media (max-width: 560px) {
     .resume-content {
-        padding: 80px 10px 0;
+        padding: 18px 12px 22px;
     }
 
-    .resume-footer {
-        padding: 18px 12px;
+    .resume-footer-inner {
+        align-items: flex-start;
+        flex-direction: column;
+        gap: 10px;
     }
 
     .resume-top-button {
-        bottom: 16px;
         right: 16px;
+        bottom: 16px;
+        width: 40px;
+        height: 40px;
+    }
+}
+
+@media (max-width: 380px) {
+    .resume-header {
+        gap: 4px;
+        padding: 8px 10px;
+    }
+
+    .resume-brand img {
+        flex-basis: 36px;
+        width: 36px;
+        height: 36px;
+    }
+
+    .resume-brand {
+        gap: 7px;
+    }
+
+    .resume-brand small {
+        display: none;
+    }
+
+    .resume-brand strong {
+        font-size: 0.82rem;
+    }
+
+    .resume-actions {
+        gap: 4px;
+    }
+
+    .resume-actions .resume-download {
+        gap: 4px;
+        min-height: 34px;
+        padding: 5px 6px;
+        font-size: 0.7rem;
+    }
+
+    .resume-menu-button {
+        flex-basis: 34px;
+        width: 34px;
+        min-height: 34px;
+    }
+}
+
+@media (prefers-reduced-motion: reduce) {
+    html {
+        scroll-behavior: auto;
+    }
+}
+
+@page {
+    margin: 12mm;
+}
+
+@media print {
+    :root,
+    body {
+        background: #fff;
+        color: #000;
+        font-size: 10pt;
+        -webkit-font-smoothing: auto;
+    }
+
+    .resume-header,
+    .resume-footer,
+    .resume-top-button {
+        display: none !important;
+    }
+
+    .resume-app {
+        min-height: 0;
+    }
+
+    .resume-content {
+        padding: 0;
+    }
+
+    a {
+        color: #000;
     }
 }
