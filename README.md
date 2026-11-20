@@ -1,30 +1,42 @@
-# Ashish Ranjan | Resume
+<div align="center">
 
-A responsive personal resume website built with React and Vite. It includes a full site page, a resume-only view, recent public GitHub projects, and a print-ready layout.
+<h1>Ashish Ranjan</h1>
 
-![Resume website preview](screenshot.png)
+<h3>Full-Stack Developer | React &amp; Node.js</h3>
 
-## Live pages
+<p>Responsive resume website with recent projects, a print-ready layout, and a downloadable PDF.</p>
 
-- [Public resume](https://a2rp.github.io/resume/)
-- [Resume only](https://a2rp.github.io/resume/resume-only)
-- [Download the latest resume PDF](https://github.com/a2rp/resume/releases/latest/download/Ashish_Ranjan_Resume.pdf)
+<p>
+  <a href="https://a2rp.github.io/resume/"><img alt="Public Resume" src="https://img.shields.io/badge/OPEN-PUBLIC_RESUME-0D6694?style=for-the-badge" /></a>
+  <a href="https://a2rp.github.io/resume/resume-only"><img alt="Resume Only" src="https://img.shields.io/badge/OPEN-RESUME_ONLY-102237?style=for-the-badge" /></a>
+  <a href="https://github.com/a2rp/resume/releases/latest/download/Ashish_Ranjan_Resume.pdf"><img alt="Download PDF" src="https://img.shields.io/badge/DOWNLOAD-LATEST_PDF-B42318?style=for-the-badge" /></a>
+</p>
+
+<p>
+  <a href="https://github.com/a2rp/resume/actions/workflows/deploy.yml"><img alt="Deploy to GitHub Pages" src="https://github.com/a2rp/resume/actions/workflows/deploy.yml/badge.svg?branch=main" /></a>
+  <img alt="React" src="https://img.shields.io/badge/React-149ECA?style=flat-square&amp;logo=react&amp;logoColor=white" />
+  <img alt="Vite" src="https://img.shields.io/badge/Vite-646CFF?style=flat-square&amp;logo=vite&amp;logoColor=white" />
+  <img alt="CSS Modules" src="https://img.shields.io/badge/CSS_Modules-264DE4?style=flat-square" />
+</p>
+
+<br />
+
+<img src="screenshot.png" alt="Preview of Ashish Ranjan's resume website" width="820" />
+
+</div>
+
+## About
+
+This project presents my experience, skills, education, and selected work in a responsive web resume. The resume content is shared between the full site and a clean, standalone view. Recent public projects are loaded from the GitHub API.
 
 ## Features
 
-- Responsive resume layout for desktop, tablet, and mobile.
-- Separate resume-only route without the site header or footer.
-- Recent public projects loaded from the GitHub API, with a link to browse all repositories.
-- Header and footer with portfolio, contact, social, and support links.
+- Responsive layout for desktop, tablet, and mobile.
+- Standalone resume page without site navigation.
+- Recent GitHub projects with descriptions, update dates, and demo links where available.
 - Print styles for a clean resume printout.
+- Header and footer with portfolio, contact, social, and support links.
 - Lazy-loaded routes and a shared resume component.
-
-## Built with
-
-- React and React Router
-- Vite
-- CSS Modules
-- React Icons
 
 ## Run locally
 
@@ -35,7 +47,7 @@ npm ci
 npm run dev
 ```
 
-Useful project commands:
+Available checks and preview:
 
 ```bash
 npm run lint
@@ -43,30 +55,33 @@ npm run build
 npm run preview
 ```
 
-## Update the resume PDF
+## Publish a new resume PDF
 
-The header download link always targets the latest GitHub release. To publish a new PDF:
+The Download PDF buttons use GitHub's latest-release URL, so the link stays the same when the resume changes.
 
-1. Upload the PDF to a GitHub release as `Ashish_Ranjan_Resume.pdf`.
-2. Mark that release as **Latest**.
+1. Create a new release in this repository.
+2. Attach the PDF as `Ashish_Ranjan_Resume.pdf`.
+3. Mark the release as **Latest** and publish it.
 
-The download button will then serve the new file through the stable latest-release URL above.
+The local PDF copy is stored at `public/pdf/Ashish_Ranjan_Resume.pdf`.
 
-The local copy used by the project is `public/pdf/Ashish_Ranjan_Resume.pdf`.
+## Deployment
 
-## Deploy
-
-Pushing to `main` starts the GitHub Actions workflow in `.github/workflows/deploy.yml`, which builds the site and deploys it to GitHub Pages. The Vite configuration also creates a `404.html` fallback for client-side routes.
+Pushing to `main` triggers [the GitHub Pages workflow](.github/workflows/deploy.yml). It builds the site and publishes the `dist` output. The Vite build also creates a `404.html` fallback for client-side routes.
 
 ## Project structure
 
 ```text
 src/
-  appRoutes/       Route definitions and lazy loading
-  components/      Header, footer, loader, and back-to-top control
-  layouts/         Shared site layout
-  pages/           Home and resume-only pages
-  resume/          Shared resume content and styles
+|-- appRoutes/       Route definitions and lazy loading
+|-- components/      Header, footer, loader, and back-to-top control
+|-- layouts/         Shared site layout
+|-- pages/           Home and resume-only pages
+\-- resume/          Shared resume content and styles
 public/
-  pdf/             Local resume PDF
+\-- pdf/             Local resume PDF
 ```
+
+## Built with
+
+React | React Router | Vite | CSS Modules | React Icons
