@@ -1,0 +1,242 @@
+.header {
+    position: sticky;
+    top: 0;
+    z-index: 30;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 16px;
+    padding: 10px max(12px, calc((100vw - 1123px) / 2));
+    border-bottom: 1px solid #d8e0e6;
+    background: #fff;
+    box-shadow: 0 4px 16px rgba(16, 34, 55, 0.06);
+}
+
+.brand {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    min-width: 0;
+    color: #102237;
+    text-decoration: none;
+}
+
+.brand:hover {
+    color: #102237;
+}
+
+.brand img {
+    flex: 0 0 44px;
+    width: 44px;
+    height: 44px;
+    border-radius: 7px;
+    object-fit: contain;
+}
+
+.brand span {
+    display: grid;
+    gap: 2px;
+    min-width: 0;
+    line-height: 1.2;
+}
+
+.brand small {
+    color: #637281;
+    font-size: 0.64rem;
+    font-weight: 700;
+    letter-spacing: 0.1em;
+}
+
+.brand strong {
+    font-size: 0.98rem;
+    font-weight: 700;
+}
+
+.actions {
+    display: flex;
+    align-items: center;
+    gap: 9px;
+}
+
+.action,
+.menuButton {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 7px;
+    min-height: 40px;
+    border-radius: 7px;
+    font-size: 0.9rem;
+    font-weight: 600;
+    text-decoration: none;
+}
+
+.portfolio {
+    padding: 8px 12px;
+    border: 1px solid transparent;
+    color: #23303d;
+}
+
+.resumeOnly {
+    padding: 8px 12px;
+    border: 1px solid transparent;
+    color: #23303d;
+}
+
+.portfolio:hover,
+.portfolio:focus-visible,
+.resumeOnly:hover,
+.resumeOnly:focus-visible {
+    border-color: #c7d2dc;
+    background: #f4f7f9;
+    color: #0d6694;
+}
+
+.download {
+    padding: 8px 13px;
+    border: 1px solid #102237;
+    background: #102237;
+    color: #fff;
+}
+
+.download:hover,
+.download:focus-visible {
+    border-color: #0d6694;
+    background: #0d6694;
+    color: #fff;
+}
+
+.menuButton {
+    display: none;
+    width: 40px;
+    padding: 0;
+    border: 1px solid #c7ced6;
+    background: #fff;
+    color: #23303d;
+    cursor: pointer;
+}
+
+.menuButton:hover,
+.menuButton:focus-visible {
+    border-color: #0d6694;
+    background: #f4f8fa;
+    color: #0d6694;
+}
+
+.mobileMenu {
+    position: absolute;
+    top: calc(100% + 6px);
+    right: max(12px, calc((100vw - 1200px) / 2));
+    z-index: 31;
+    display: none;
+    gap: 4px;
+    min-width: 200px;
+    padding: 7px;
+    border: 1px solid #c7ced6;
+    border-radius: 10px;
+    background: #fff;
+    box-shadow: 0 12px 28px rgba(16, 34, 55, 0.14);
+}
+
+.open {
+    display: grid;
+}
+
+.mobileMenuLink {
+    display: flex;
+    align-items: center;
+    gap: 9px;
+    min-height: 40px;
+    padding: 8px 10px;
+    border-radius: 7px;
+    color: #23303d;
+    text-decoration: none;
+}
+
+.mobileMenuLink:hover,
+.mobileMenuLink:focus-visible {
+    background: #f1f6fa;
+    color: #0d6694;
+}
+
+@media (max-width: 620px) {
+    .header {
+        gap: 8px;
+        padding: 8px 12px;
+    }
+
+    .actions {
+        gap: 6px;
+    }
+
+    .portfolio,
+    .resumeOnly {
+        display: none;
+    }
+
+    .download {
+        min-height: 38px;
+        padding: 7px 9px;
+        font-size: 0.82rem;
+    }
+
+    .menuButton {
+        display: inline-flex;
+        flex: 0 0 38px;
+        width: 38px;
+        min-height: 38px;
+    }
+
+    .mobileMenu {
+        right: 12px;
+    }
+}
+
+@media (max-width: 380px) {
+    .header {
+        gap: 4px;
+        padding: 8px 10px;
+    }
+
+    .brand img {
+        flex-basis: 36px;
+        width: 36px;
+        height: 36px;
+    }
+
+    .brand {
+        gap: 7px;
+    }
+
+    .brand small {
+        display: none;
+    }
+
+    .brand strong {
+        font-size: 0.82rem;
+    }
+
+    .actions {
+        gap: 4px;
+    }
+
+    .download {
+        gap: 4px;
+        min-height: 34px;
+        padding: 5px 6px;
+        font-size: 0.7rem;
+    }
+
+    .menuButton {
+        flex-basis: 34px;
+        width: 34px;
+        min-height: 34px;
+    }
+}
+
+@media print {
+    .header,
+    .mobileMenu {
+        display: none !important;
+    }
+}

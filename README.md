@@ -14,7 +14,7 @@ A responsive, public, versioned resume page with a downloadable PDF and links to
 
 ## Tech stack
 
-React, Vite, styled-components, CSS, and React Icons.
+React, Vite, CSS Modules, and React Icons.
 
 ## Run locally
 
@@ -28,6 +28,8 @@ Build with `npm run build` and deploy with `npm run deploy`.
 ## Live
 
 [Open the resume](https://a2rp.github.io/resume/)
+
+[Open the resume without site navigation](https://a2rp.github.io/resume/resume-only)
 
 [Download the PDF](https://github.com/a2rp/resume/releases/latest/download/Ashish_Ranjan_Resume.pdf)
 

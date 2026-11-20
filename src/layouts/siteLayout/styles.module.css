@@ -1,0 +1,27 @@
+.app {
+    display: flex;
+    min-height: 100vh;
+    flex-direction: column;
+}
+
+.content {
+    flex: 1;
+    width: 100%;
+    padding: 26px clamp(12px, 3vw, 32px) 32px;
+}
+
+@media (max-width: 620px) {
+    .content {
+        padding: 18px 12px 22px;
+    }
+}
+
+@media print {
+    .app {
+        min-height: 0;
+    }
+
+    .content {
+        padding: 0;
+    }
+}
