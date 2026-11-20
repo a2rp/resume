@@ -77,16 +77,8 @@
     color: #23303d;
 }
 
-.resumeOnly {
-    padding: 8px 12px;
-    border: 1px solid transparent;
-    color: #23303d;
-}
-
 .portfolio:hover,
-.portfolio:focus-visible,
-.resumeOnly:hover,
-.resumeOnly:focus-visible {
+.portfolio:focus-visible {
     border-color: #c7d2dc;
     background: #f4f7f9;
     color: #0d6694;
@@ -169,8 +161,7 @@
         gap: 6px;
     }
 
-    .portfolio,
-    .resumeOnly {
+    .portfolio {
         display: none;
     }
 

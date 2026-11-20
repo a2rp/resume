@@ -47,9 +47,6 @@ const Header = () => {
                     <FiDownload />
                     <span>Download PDF</span>
                 </a>
-                <Link className={`${styles.action} ${styles.resumeOnly}`} to="/resume-only">
-                    Resume Only
-                </Link>
                 <a className={`${styles.action} ${styles.portfolio}`} href="https://www.ashishranjan.net/" target="_blank" rel="noopener noreferrer">
                     Portfolio
                 </a>
@@ -73,9 +70,6 @@ const Header = () => {
                 <a className={styles.mobileMenuLink} href={resumePdfUrl} download onClick={closeMenu}>
                     <FiDownload /> Download PDF
                 </a>
-                <Link className={styles.mobileMenuLink} to="/resume-only" onClick={closeMenu}>
-                    Resume Only
-                </Link>
                 <a className={styles.mobileMenuLink} href="https://www.ashishranjan.net/" target="_blank" rel="noopener noreferrer" onClick={closeMenu}>
                     <FaGlobe /> Portfolio
                 </a>
