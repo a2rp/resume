@@ -70,13 +70,3 @@ src/
 public/
   pdf/             Local resume PDF
 ```
-
-## Links
-
-- [Portfolio](https://www.ashishranjan.net/)
-- [GitHub](https://github.com/a2rp)
-- [LinkedIn](https://www.linkedin.com/in/aashishranjan)
-- [CodePen](https://codepen.io/ash1198)
-- [Email](mailto:ash.ranjan09@gmail.com)
-- [Buy Me a Coffee](https://buymeacoffee.com/a2rp)
-- [Patreon](https://www.patreon.com/a2rp)
