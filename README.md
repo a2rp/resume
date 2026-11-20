@@ -1,50 +1,82 @@
-# Ashish Ranjan Resume
+# Ashish Ranjan | Resume
 
-A responsive, public, versioned resume page with a downloadable PDF and links to professional work.
+A responsive personal resume website built with React and Vite. It includes a full site page, a resume-only view, recent public GitHub projects, and a print-ready layout.
 
-![Resume preview](screenshot.png)
+![Resume website preview](screenshot.png)
+
+## Live pages
+
+- [Public resume](https://a2rp.github.io/resume/)
+- [Resume only](https://a2rp.github.io/resume/resume-only)
+- [Download the latest resume PDF](https://github.com/a2rp/resume/releases/latest/download/Ashish_Ranjan_Resume.pdf)
 
 ## Features
 
-- Responsive resume layout for desktop and mobile screens.
-- Fixed toolbar with local branding, portfolio link, and PDF download.
-- Technical skills, education, experience, projects, and contact details.
-- Print-friendly layout that hides the toolbar and footer.
-- Icon-only social and support links in the footer.
+- Responsive resume layout for desktop, tablet, and mobile.
+- Separate resume-only route without the site header or footer.
+- Recent public projects loaded from the GitHub API, with a link to browse all repositories.
+- Header and footer with portfolio, contact, social, and support links.
+- Print styles for a clean resume printout.
+- Lazy-loaded routes and a shared resume component.
 
-## Tech stack
+## Built with
 
-React, Vite, CSS Modules, and React Icons.
+- React and React Router
+- Vite
+- CSS Modules
+- React Icons
 
 ## Run locally
 
+Requires Node.js and npm.
+
 ```bash
-npm install
+npm ci
 npm run dev
 ```
 
-Build with `npm run build` and deploy with `npm run deploy`.
+Useful project commands:
 
-## Live
+```bash
+npm run lint
+npm run build
+npm run preview
+```
 
-[Open the resume](https://a2rp.github.io/resume/)
+## Update the resume PDF
 
-[Open the resume without site navigation](https://a2rp.github.io/resume/resume-only)
+The header download link always targets the latest GitHub release. To publish a new PDF:
 
-[Download the PDF](https://github.com/a2rp/resume/releases/latest/download/Ashish_Ranjan_Resume.pdf)
+1. Upload the PDF to a GitHub release as `Ashish_Ranjan_Resume.pdf`.
+2. Mark that release as **Latest**.
+
+The download button will then serve the new file through the stable latest-release URL above.
+
+The local copy used by the project is `public/pdf/Ashish_Ranjan_Resume.pdf`.
+
+## Deploy
+
+Pushing to `main` starts the GitHub Actions workflow in `.github/workflows/deploy.yml`, which builds the site and deploys it to GitHub Pages. The Vite configuration also creates a `404.html` fallback for client-side routes.
+
+## Project structure
+
+```text
+src/
+  appRoutes/       Route definitions and lazy loading
+  components/      Header, footer, loader, and back-to-top control
+  layouts/         Shared site layout
+  pages/           Home and resume-only pages
+  resume/          Shared resume content and styles
+public/
+  pdf/             Local resume PDF
+```
 
 ## Links
 
-- Portfolio: [https://www.ashishranjan.net](https://www.ashishranjan.net)
-- GitHub: [https://github.com/a2rp](https://github.com/a2rp)
-- CodePen: [https://codepen.io/ash1198](https://codepen.io/ash1198)
-- LinkedIn: [https://www.linkedin.com/in/aashishranjan](https://www.linkedin.com/in/aashishranjan)
-- Facebook: [https://www.facebook.com/theash.ashish/](https://www.facebook.com/theash.ashish/)
-- YouTube: [https://www.youtube.com/@ashishranjan-ashz?sub_confirmation=1](https://www.youtube.com/@ashishranjan-ashz?sub_confirmation=1)
-- Email: [ash.ranjan09@gmail.com](mailto:ash.ranjan09@gmail.com)
-
-## Support
-
-- Support: [https://a2rp-donation-page.netlify.app/](https://a2rp-donation-page.netlify.app/)
-- Buy Me a Coffee: [https://buymeacoffee.com/a2rp](https://buymeacoffee.com/a2rp)
-- Patreon: [https://patreon.com/a2rp](https://patreon.com/a2rp)
+- [Portfolio](https://www.ashishranjan.net/)
+- [GitHub](https://github.com/a2rp)
+- [LinkedIn](https://www.linkedin.com/in/aashishranjan)
+- [CodePen](https://codepen.io/ash1198)
+- [Email](mailto:ash.ranjan09@gmail.com)
+- [Buy Me a Coffee](https://buymeacoffee.com/a2rp)
+- [Patreon](https://www.patreon.com/a2rp)
