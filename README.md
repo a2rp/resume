@@ -25,63 +25,80 @@
 
 </div>
 
-## About
+## Overview
 
-This project presents my experience, skills, education, and selected work in a responsive web resume. The resume content is shared between the full site and a clean, standalone view. Recent public projects are loaded from the GitHub API.
+This repository contains my public resume website and its print-focused resume view. Both pages render the same resume component, so experience, skills, education, and project details stay consistent. The full page adds the site header and footer; the standalone page leaves those out for reading or printing.
 
-## Features
+## Pages
 
-- Responsive layout for desktop, tablet, and mobile.
-- Standalone resume page without site navigation.
-- Recent GitHub projects with descriptions, update dates, and demo links where available.
-- Print styles for a clean resume printout.
-- Header and footer with portfolio, contact, social, and support links.
-- Lazy-loaded routes and a shared resume component.
+| Page | URL | Purpose |
+| --- | --- | --- |
+| Public resume | [a2rp.github.io/resume](https://a2rp.github.io/resume/) | Resume with site header, PDF download, and footer. |
+| Resume only | [a2rp.github.io/resume/resume-only](https://a2rp.github.io/resume/resume-only) | Resume content without site navigation. |
+| Latest PDF | [GitHub release download](https://github.com/a2rp/resume/releases/latest/download/Ashish_Ranjan_Resume.pdf) | Downloadable PDF attached to the latest release. |
+
+## What the site includes
+
+- Resume sections for professional summary, technical skills, industry and freelance experience, education, awards, and internship experience.
+- Responsive layouts for desktop, tablet, and mobile screens.
+- A recent projects section populated from my public GitHub repositories.
+- Portfolio, contact, and social links in the site navigation and footer.
+- Print styles that hide site navigation and format the resume for printing.
+- Lazy-loaded pages, a shared resume component, and a loading state while pages are imported.
+
+### How recent projects are selected
+
+The page requests my public repositories from the GitHub API, ordered by most recently pushed. It displays up to three repositories that have a description, skips forks and the `resume` and `a2rp` repositories, and shows a live demo link when a repository has an HTTPS homepage. If GitHub cannot be reached, the page provides a link to browse my repositories directly.
 
 ## Run locally
 
-Requires Node.js and npm.
+Requires Node.js 20 or newer and npm.
 
 ```bash
 npm ci
 npm run dev
 ```
 
-Available checks and preview:
+Open the local URL printed by Vite. The resume-only route is available at `/resume-only`.
 
-```bash
-npm run lint
-npm run build
-npm run preview
-```
+| Command | Purpose |
+| --- | --- |
+| `npm run lint` | Check the JavaScript and JSX with ESLint. |
+| `npm run build` | Create the production site in `dist/`. |
+| `npm run preview` | Serve the production build locally. Run the build first. |
 
-## Publish a new resume PDF
+## Update the resume PDF
 
-The Download PDF buttons use GitHub's latest-release URL, so the link stays the same when the resume changes.
+The header's Download PDF buttons use the stable GitHub URL for the latest release. The button does not point at the local copy in `public/`, so publishing a replacement PDF does not require a code change.
 
-1. Create a new release in this repository.
-2. Attach the PDF as `Ashish_Ranjan_Resume.pdf`.
+1. Create a new release in this repository with a new tag.
+2. Attach the PDF with the exact filename `Ashish_Ranjan_Resume.pdf`.
 3. Mark the release as **Latest** and publish it.
 
-The local PDF copy is stored at `public/pdf/Ashish_Ranjan_Resume.pdf`.
+The release asset name must stay the same because the download link uses it. The local copy tracked with the website is `public/pdf/Ashish_Ranjan_Resume.pdf`.
 
-## Deployment
+## Deploy to GitHub Pages
 
-Pushing to `main` triggers [the GitHub Pages workflow](.github/workflows/deploy.yml). It builds the site and publishes the `dist` output. The Vite build also creates a `404.html` fallback for client-side routes.
+Every push to `main` starts [the GitHub Pages workflow](.github/workflows/deploy.yml). The workflow installs dependencies, builds the site, and publishes the contents of `dist/`. Vite uses `/resume/` as the site base and creates a `404.html` fallback so client-side routes work when opened directly.
 
 ## Project structure
 
 ```text
-src/
-|-- appRoutes/       Route definitions and lazy loading
-|-- components/      Header, footer, loader, and back-to-top control
-|-- layouts/         Shared site layout
-|-- pages/           Home and resume-only pages
-\-- resume/          Shared resume content and styles
-public/
-\-- pdf/             Local resume PDF
+.
+|-- README.md               Project guide
+|-- screenshot.png          README preview image
+|-- src/
+|   |-- App.jsx             App entry component
+|   |-- main.jsx            React and BrowserRouter setup
+|   |-- appRoutes/          Lazy-loaded route definitions
+|   |-- components/         Header, footer, loader, and back-to-top control
+|   |-- layouts/siteLayout/ Shared header/content/footer layout
+|   |-- pages/              Public home and resume-only pages
+|   \-- resume/             Shared resume content and print styles
+\-- public/
+    \-- pdf/                Local resume PDF copy
 ```
 
-## Built with
+## Technology
 
-React | React Router | Vite | CSS Modules | React Icons
+React · React Router · Vite · CSS Modules · React Icons · GitHub Pages
